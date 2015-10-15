@@ -34,11 +34,6 @@ def parse_test_output():
     except Exception, e:
         print_error("An error has occured: " + str(sys.exc_info()))
 
-    for error in manager.errors:
-        print error.message
-        print error.file
-        print error.line
-
 
 def _is_debug():
     return int(vim.eval("g:phpunit_debug")) == 1

@@ -1,0 +1,15 @@
+PHPUnit 5.0.6 by Sebastian Bergmann and contributors.
+
+F                                                                   1 / 1 (100%)
+
+Time: 74 ms, Memory: 11.50Mb
+
+There was 1 failure:
+
+1) ExampleTest::testBasicExample
+Failed asserting that false is true.
+
+/home/alex/Development/cms/app/tests/ExampleTest.php:14
+
+FAILURES!
+Tests: 1, Assertions: 1, Failures: 1
