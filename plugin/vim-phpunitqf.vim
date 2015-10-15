@@ -14,9 +14,14 @@
 " to load it automatically, or load it manually with :so sauce.vim.
 "
 " License: MIT
-"                
+"
 " }}}
 " ------------------------------------------------------------------------------
+
+" Check vim compiled with +python
+if !has('python')
+    finish
+endif
 
 if filereadable($VIMRUNTIME."/plugin/phpunit.py")
     pyfile $VIMRUNTIME/plugin/phpunit.py
