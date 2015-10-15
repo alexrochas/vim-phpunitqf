@@ -5,7 +5,7 @@ import re
 def print_error(msg):
     vim.command("echohl Error | echo \""+msg+"\" | echohl None")
 
-""" 
+"""
 " Super intelligent debug function
 """
 def debug(msg):
@@ -13,7 +13,7 @@ def debug(msg):
         print msg
 
 def parse_test_output( ):
-    global debugOn 
+    global debugOn
     try:
         fname = vim.eval("g:phpunit_tmpfile")
         debugOn = int(vim.eval("g:phpunit_debug"))
@@ -29,11 +29,11 @@ def parse_test_output( ):
         if manager.hasErrors():
             manager.addToQuickfix()
         elif parser.foundTestSummary == False:
-            vim.command('echohl Error | echo "phpunit failed to run (or so it seems)" | echohl None') 
+            vim.command('echohl Error | echo "phpunit failed to run (or so it seems)" | echohl None')
             vim.command('cclose')
             vim.command('call setqflist([])')
         else:
-            vim.command('echohl WarningMsg | echo "No test errors or failures" | echohl None') 
+            vim.command('echohl WarningMsg | echo "No test errors or failures" | echohl None')
             vim.command('cclose')
             vim.command('call setqflist([])')
     except ParserException, e:
