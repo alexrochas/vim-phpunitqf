@@ -55,6 +55,28 @@ class TestOutputParserTest(unittest.TestCase):
         # then
         self.assertFalse(phpunit.print_error.called)
 
+    def test_should_parse_first_line_with_error_type(self):
+        # given
+        _file = open(self.TEMP_FILE_PATH)
+        line = "There was 1 failure:"
+        expected_type = "F"
+        # when
+        self.output_parser.parseLine(_file, line)
+        # then
+        self.assertTrue(self.output_parser.foundErrors)
+        self.assertEqual(self.output_parser.parsingType, expected_type)
+        self.assertFalse(phpunit.print_error.called)
+
+    def test_should_parse_file_error_line(self):
+        # given
+        _file = open(self.TEMP_FILE_PATH)
+        line = "1) ExampleTest::testBasicExample"
+        # when
+        self.output_parser.parseLine(_file, line)
+        # then
+        self.assertFalse(self.output_parser.foundErrors)
+        self.assertFalse(phpunit.print_error.called)
+
 
 def _eval_side_effect(vim_config):
         def _decorated_method(*arg):
