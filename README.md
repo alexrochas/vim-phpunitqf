@@ -1,6 +1,6 @@
 # PHPUnit runner for Vim
 
-[![Code Climate](https://codeclimate.com/github/alexrochas/vim-phpunitqf/badges/gpa.svg)](https://codeclimate.com/github/alexrochas/vim-phpunitqf) [![Test Coverage](https://codeclimate.com/github/alexrochas/vim-phpunitqf/badges/coverage.svg)](https://codeclimate.com/github/alexrochas/vim-phpunitqf/coverage)
+[![Build Status](https://travis-ci.org/alexrochas/vim-phpunitqf.svg?branch=master)](https://travis-ci.org/alexrochas/vim-phpunitqf) [![Code Climate](https://codeclimate.com/github/alexrochas/vim-phpunitqf/badges/gpa.svg)](https://codeclimate.com/github/alexrochas/vim-phpunitqf) [![codecov.io](https://codecov.io/github/alexrochas/vim-phpunitqf/coverage.svg?branch=master)](https://codecov.io/github/alexrochas/vim-phpunitqf?branch=master)
 
 PHPUnitQf is a plugin for Vim that allows you to run PHPUnit tests easily from the Vim window. It then reads the output and puts the errors into the [quickfix][1] list, so you can easily jump to them. It's configurable too, so if you use a PHPUnit wrapper command or have a special set of arguments, then that's no problem.
 
